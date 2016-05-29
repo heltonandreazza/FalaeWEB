@@ -23,9 +23,10 @@ implements RMIServerAPI {
     private static Method $method_postGroup_10;
     private static Method $method_postLog_11;
     private static Method $method_postUser_12;
-    private static Method $method_writeGroupsFile_13;
-    private static Method $method_writeLogsFile_14;
-    private static Method $method_writeUsersFile_15;
+    private static Method $method_setUsersGroup_13;
+    private static Method $method_writeGroupsFile_14;
+    private static Method $method_writeLogsFile_15;
+    private static Method $method_writeUsersFile_16;
     static /* synthetic */ Class class$servers$RMIServerAPI;
     static /* synthetic */ Class class$java$lang$String;
 
@@ -74,11 +75,16 @@ implements RMIServerAPI {
             arrclass8[1] = class$java$lang$String != null ? class$java$lang$String : (RMIServer_Stub.class$java$lang$String = RMIServer_Stub.class$("java.lang.String"));
             arrclass8[2] = class$java$lang$String != null ? class$java$lang$String : (RMIServer_Stub.class$java$lang$String = RMIServer_Stub.class$("java.lang.String"));
             $method_postUser_12 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("postUser", arrclass8);
-            $method_writeGroupsFile_13 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeGroupsFile", new Class[0]);
-            $method_writeLogsFile_14 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeLogsFile", new Class[0]);
-            $method_writeUsersFile_15 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeUsersFile", new Class[0]);
+            Class[] arrclass9 = new Class[3];
+            arrclass9[0] = class$java$lang$String != null ? class$java$lang$String : (RMIServer_Stub.class$java$lang$String = RMIServer_Stub.class$("java.lang.String"));
+            arrclass9[1] = class$java$lang$String != null ? class$java$lang$String : (RMIServer_Stub.class$java$lang$String = RMIServer_Stub.class$("java.lang.String"));
+            arrclass9[2] = class$java$lang$String != null ? class$java$lang$String : (RMIServer_Stub.class$java$lang$String = RMIServer_Stub.class$("java.lang.String"));
+            $method_setUsersGroup_13 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("setUsersGroup", arrclass9);
+            $method_writeGroupsFile_14 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeGroupsFile", new Class[0]);
+            $method_writeLogsFile_15 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeLogsFile", new Class[0]);
+            $method_writeUsersFile_16 = (class$servers$RMIServerAPI != null ? class$servers$RMIServerAPI : (RMIServer_Stub.class$servers$RMIServerAPI = RMIServer_Stub.class$("servers.RMIServerAPI"))).getMethod("writeUsersFile", new Class[0]);
         }
-        catch (NoSuchMethodException v10) {
+        catch (NoSuchMethodException v11) {
             throw new NoSuchMethodError("stub class initialization failed");
         }
     }
@@ -301,9 +307,25 @@ implements RMIServerAPI {
         }
     }
 
+    public String setUsersGroup(String string, String string2, String string3) throws RemoteException {
+        try {
+            Object object = this.ref.invoke(this, $method_setUsersGroup_13, new Object[]{string, string2, string3}, -3448012979276970894L);
+            return (String)object;
+        }
+        catch (RuntimeException var4_5) {
+            throw var4_5;
+        }
+        catch (RemoteException var4_6) {
+            throw var4_6;
+        }
+        catch (Exception var4_7) {
+            throw new UnexpectedException("undeclared checked exception", var4_7);
+        }
+    }
+
     public void writeGroupsFile() throws RemoteException {
         try {
-            this.ref.invoke(this, $method_writeGroupsFile_13, null, -4063824126688741945L);
+            this.ref.invoke(this, $method_writeGroupsFile_14, null, -4063824126688741945L);
         }
         catch (RuntimeException var1_1) {
             throw var1_1;
@@ -318,7 +340,7 @@ implements RMIServerAPI {
 
     public void writeLogsFile() throws RemoteException {
         try {
-            this.ref.invoke(this, $method_writeLogsFile_14, null, 8789672278232223848L);
+            this.ref.invoke(this, $method_writeLogsFile_15, null, 8789672278232223848L);
         }
         catch (RuntimeException var1_1) {
             throw var1_1;
@@ -333,7 +355,7 @@ implements RMIServerAPI {
 
     public void writeUsersFile() throws RemoteException {
         try {
-            this.ref.invoke(this, $method_writeUsersFile_15, null, -5429800351363843585L);
+            this.ref.invoke(this, $method_writeUsersFile_16, null, -5429800351363843585L);
         }
         catch (RuntimeException var1_1) {
             throw var1_1;
